@@ -56,11 +56,7 @@ You can test the API using the included Postman collection:
 
 📄 **[HashBase.postman.json](./HashBase.postman.json)**
 
-Import it into Postman to explore available routes, including:
-- `POST /torrent`
-- `GET /torrent/search`
-- `POST /report`
-- `GET /health`
+Import it into Postman to explore available routes.
 
 ## License
 
