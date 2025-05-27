@@ -60,4 +60,4 @@ Import it into Postman to explore available routes.
 
 ## License
 
-MIT
+[MIT](./LICENSE)
