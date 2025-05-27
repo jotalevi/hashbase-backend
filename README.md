@@ -36,7 +36,7 @@ Hashbase is a modern torrent indexing backend built with **NestJS**, **PostgreSQ
 ### Clone the repo
 
 ```bash
-git clone https://github.com/your-org/hashbase-backend.git
+git clone https://github.com/jotalevi/hashbase-backend.git
 cd hashbase-backend
 ```
 
@@ -72,12 +72,21 @@ npm run test
 
 ## 📌 Environment Variables
 
-Copy `.env.example` to `.env` and configure the following:
+Since this is all dockerized the .env is included in the repo. Make sure to change passwords if you plan to serve this. 
 
 ```
-DATABASE_URL=postgres://postgres:postgres@localhost:5432/hashbase
-MEILISEARCH_HOST=http://localhost:7700
-MEILISEARCH_API_KEY=masterKey
+# App
+PORT=3000
+
+# Database
+DB_HOST=db
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
+DB_NAME=hashbase
+
+# Meilisearch
+MEILI_HOST=http://meilisearch:7700
 ```
 
 ---
