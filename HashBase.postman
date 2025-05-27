@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "11cbc96f-f85a-4950-9fbb-41d5ca2548be",
+		"name": "HashBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39603330"
+	},
+	"item": [
+		{
+			"name": "health",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/health",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload a torrent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"magnet\": \"magnet:?xt=urn:btih:9a08ed608f5c08d37554a0bc82d7f1dca347e6b3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/torrent",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"torrent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search torrents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/torrent/search?q=oni",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"torrent",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "oni"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get torrent from hash",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/torrent/:infohash",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"torrent",
+						":infohash"
+					],
+					"variable": [
+						{
+							"key": "infohash",
+							"value": "e7f3867832a836106e6b3f237a93c3130be25b9a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "report with hash",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"infoHash\": \"e7f3867832a836106e6b3f237a93c3130be25b9a\",\r\n    \"type\": \"positive\",\r\n    \"message\": \"Great game, well-seeded, prestine files.\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/report",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
